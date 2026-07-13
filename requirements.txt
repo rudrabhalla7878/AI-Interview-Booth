@@ -1,0 +1,15 @@
+streamlit
+pdfplumber
+plotly
+reportlab
+opencv-python-headless
+deepface
+tensorflow
+SpeechRecognition
+sentence-transformers
+torch
+scikit-learn
+pandas
+numpy
+matplotlib
+Pillow
