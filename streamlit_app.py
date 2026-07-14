@@ -6,8 +6,8 @@ import sys
 st.write(sys.version)
 
 from modules.resume_parser import extract_text_from_resume
-from modules.question_generator import generate_questions
-from modules.interview import run_interview
+#from modules.question_generator import generate_questions
+#from modules.interview import run_interview
 
 # ---------------------------------------------
 # PAGE CONFIG
