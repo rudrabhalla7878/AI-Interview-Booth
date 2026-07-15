@@ -2,23 +2,36 @@ import streamlit as st
 import tempfile
 import sys
 
-
-st.write(sys.version)
-
 from modules.resume_parser import extract_text_from_resume
-#from modules.question_generator import generate_questions
-#from modules.interview import run_interview
+from modules.question_generator import generate_questions
+from modules.interview import run_interview
+
+st.set_page_config(
+    page_title="AI Interview Booth",
+    page_icon="🤖",
+    layout="wide"
+)
+
+st.write("Python:", sys.version)
+st.write("Imported function:", generate_questions)
+
+try:
+    from modules.question_generator import generate_questions
+    st.success("✅ generate_questions imported successfully")
+    st.write(generate_questions)
+except Exception as e:
+    st.error(f"IMPORT FAILED: {e}")
+    st.stop()
+
+st.write("Imported generate_questions:", generate_questions)
 
 # ---------------------------------------------
 # PAGE CONFIG
 # ---------------------------------------------
 
-st.set_page_config(
-    page_title="AI Interview Booth",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+
+
+st.write(sys.version)
 def load_css():
 
     with open("assets/style.css") as f:
